@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  // 从todo组件传递过来的值  父传子 props
   props:{
     todo:{
       type:Object,
@@ -16,7 +17,7 @@ export default {
   },
   methods:{
     deleteTodo(){
-      // 自组件向父组件传输信息
+      // 子组件向父组件传输信息 $emit()方法
       this.$emit('del',this.todo.id)
     }
   }

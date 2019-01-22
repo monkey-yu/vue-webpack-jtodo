@@ -28,6 +28,7 @@ export default {
     }
   },
   computed:{
+    // 未完成的todo的数量 
     unFinishedTodoLength(){
       return this.todos.filter(todo => !todo.completed).length
     }

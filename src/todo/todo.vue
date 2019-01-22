@@ -17,15 +17,18 @@ export default {
     }
   },
   computed:{
+    // 计算属性 如果状态是all,todos全部显示，否则显示 为选中状态下的todos 用过滤器
     filteredTodos(){
       if(this.filter === 'all'){
         return this.todos
       }
-      const completed = this.filter === 'completed'
+      // 让completed 为boolean值
+      const completed = this.filter === 'completed'  
       return this.todos.filter(todo => completed === todo.completed)
     }
   },
   methods:{
+    // 添加一条todo unshift 到todos数组中，unshift从头上添加
     addTodo(e){
       this.todos.unshift({
         id:id++,
@@ -34,7 +37,9 @@ export default {
       })
       e.target.value = ''
     },
+    // @del 从子组件传递过来 id为从自组件传递过来的参数
     deletdTodo(id){
+      // 删除id 匹配的这一条 从todos数组中
       this.todos.splice(this.todos.findIndex(todo => todo.id === id),1)
     },
     toggleFilter(state){

@@ -23,7 +23,9 @@ export default {
     }
 }
 </script>
+
 <style lang="stylus" scoped>
+// stylus 是一种css的预编译器
 #app
     position absolute
     left 0
