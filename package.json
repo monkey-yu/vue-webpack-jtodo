@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js"
   },
-  "author": "zhaoyu <zhao_yu0101@wuxiapptec.com>",
+  "author": "zhaoyu914888156@qq.com",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.2.2",
